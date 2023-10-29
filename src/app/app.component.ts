@@ -18,11 +18,17 @@ export class AppComponent {
   // numero = 3;
   stringa = 'topolino';
 
+  color = 'orange';
+
   onInput(event: Event) {
     this.title = (<HTMLInputElement>event.target).value;
   }
 
   onClick(event: Event) {
     this.title = 'ho cliccato sul bottone';
+  }
+
+  getColor() {
+    return 'green';
   }
 }

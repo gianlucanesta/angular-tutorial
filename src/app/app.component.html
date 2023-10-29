@@ -20,11 +20,13 @@
 
 <h3><strong>direttiva For</strong></h3>
 
-<div *ngFor="let persona of persone">
-  <p class="cerchioVerde" *ngIf="persona.isOnline"></p>
-  <p class="cerchioRosso" *ngIf="!persona.isOnline"></p>
-  <p>{{ persona.nome }} - {{ persona.cognome }}</p>
-</div>
+<ul>
+  <li *ngFor="let persona of persone">
+    <div class="cerchioVerde" *ngIf="persona.isOnline"></div>
+    <div class="cerchioRosso" *ngIf="!persona.isOnline"></div>
+    <p>{{ persona.nome }} - {{ persona.cognome }}</p>
+  </li>
+</ul>
 
 <div
   *ngFor="
@@ -55,3 +57,16 @@
   <p *ngSwitchCase="'topolino'">quattro</p>
   <p *ngSwitchDefault>default</p>
 </div>
+
+<h3><strong>direttiva Style</strong></h3>
+
+<ul>
+  <li *ngFor="let persona of persone">
+    <!-- <div class="cerchio" [ngStyle]="{ background: getColor() }"></div> -->
+    <div
+      class="cerchio"
+      [ngStyle]="{ background: persona.isOnline ? 'green' : 'red' }"
+    ></div>
+    <p>{{ persona.nome }} - {{ persona.cognome }}</p>
+  </li>
+</ul>
