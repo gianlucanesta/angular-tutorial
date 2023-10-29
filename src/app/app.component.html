@@ -11,3 +11,8 @@
 <div>
   {{ title }}
 </div>
+
+<p *ngIf="isVisible; else bloccoElse">Sono visibile</p>
+<ng-template #bloccoElse>
+  <p>non sono visibile</p>
+</ng-template>
