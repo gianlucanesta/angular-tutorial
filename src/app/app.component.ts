@@ -12,6 +12,8 @@ import {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements AfterViewInit {
+  colore = 'yellow';
+
   title = 'angular-tutorial';
 
   persone = [
@@ -31,5 +33,9 @@ export class AppComponent implements AfterViewInit {
 
   onClick() {
     console.log(this.inputSaluti.nativeElement.value);
+  }
+
+  cambiaColoreEvidenziatore(colore: string) {
+    this.colore = colore;
   }
 }

@@ -9,9 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { HighlightDirective } from './direttive/highlight/highlight.directive';
 
 @NgModule({
-  declarations: [AppComponent, ProvaComponent],
+  declarations: [AppComponent, ProvaComponent, HighlightDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,

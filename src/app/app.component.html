@@ -1,5 +1,21 @@
-<input [value]="valore" />
-<input [(ngModel)]="valore" />
-<input #inputSaluti value="ciao" />
+<h2>Scegli il colore dell'evidenziatore</h2>
 
-<button (click)="onClick()">Invia</button>
+<div>
+  <input
+    type="radio"
+    name="coloreEvidenziatore"
+    (click)="cambiaColoreEvidenziatore('red')"
+  />Rosso
+  <input
+    type="radio"
+    name="coloreEvidenziatore"
+    (click)="cambiaColoreEvidenziatore('pink')"
+  />Rosa
+  <input
+    type="radio"
+    name="coloreEvidenziatore"
+    (click)="cambiaColoreEvidenziatore('violet')"
+  />Viola
+</div>
+
+<p [appHighlight]="colore">Ciao sono un paragrafo</p>
