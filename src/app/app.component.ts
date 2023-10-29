@@ -8,6 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-tutorial';
 
+  persone = [
+    { nome: 'luca', cognome: 'rossi', isOnline: true },
+    { nome: 'marco', cognome: 'verdi', isOnline: true },
+    { nome: 'anna', cognome: 'neri', isOnline: false },
+  ];
+
   isVisible = true;
 
   onInput(event: Event) {

@@ -12,7 +12,36 @@
   {{ title }}
 </div>
 
+<h3><strong>direttiva If</strong></h3>
 <p *ngIf="isVisible; else bloccoElse">Sono visibile</p>
 <ng-template #bloccoElse>
   <p>non sono visibile</p>
 </ng-template>
+
+<h3><strong>direttiva For</strong></h3>
+
+<div *ngFor="let persona of persone">
+  <p class="cerchioVerde" *ngIf="persona.isOnline"></p>
+  <p class="cerchioRosso" *ngIf="!persona.isOnline"></p>
+  <p>{{ persona.nome }} - {{ persona.cognome }}</p>
+</div>
+
+<div
+  *ngFor="
+    let persona of persone;
+    index as i;
+    first as isFirst;
+    last as isLast;
+    even as isEven;
+    odd as isOdd
+  "
+>
+  <p>
+    Index:{{ i }} - IsFirst:{{ isFirst }} - IsLast:{{ isLast }}- IsEven:{{
+      isEven
+    }}
+    - IsOdd:{{ isOdd }} - Name:{{ persona.nome }} - LastName:{{
+      persona.cognome
+    }}
+  </p>
+</div>
