@@ -70,3 +70,24 @@
     <p>{{ persona.nome }} - {{ persona.cognome }}</p>
   </li>
 </ul>
+
+<h3><strong>classi dinamiche con NgClass</strong></h3>
+
+<ul>
+  <li *ngFor="let persona of persone; index as i">
+    <!-- <div
+      class="cerchio"
+      [ngClass]="{
+        cerchioOnline: persona.isOnline,
+        cerchioOffine: !persona.isOnline
+      }"
+    > -->
+    <div
+      class="cerchio"
+      [ngClass]="persona.isOnline ? 'cerchioOnline' : 'cerchioOffine'"
+    >
+      {{ i }}
+    </div>
+    <p>{{ persona.nome }} - {{ persona.cognome }}</p>
+  </li>
+</ul>

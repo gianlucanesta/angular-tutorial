@@ -1,4 +1,3 @@
-.cerchio,
 .cerchioVerde,
 .cerchioRosso {
   width: 10px;
@@ -15,6 +14,13 @@
 
 .cerchio {
   background-color: blue;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 li {
@@ -26,4 +32,14 @@ li {
 li > p {
   margin-bottom: 0;
   margin-left: 10px;
+}
+
+.cerchioOnline {
+  background-color: green;
+  color: white;
+}
+
+.cerchioOffine {
+  background-color: red;
+  color: black;
 }
