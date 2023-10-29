@@ -21,3 +21,9 @@
 <button mat-raised-button color="primary" [disabled]="isDisabled">
   Primary
 </button>
+
+<div *ngFor="let persona of data">
+  <p [ngStyle]="{ color: persona.color }">
+    {{ persona.nome }} - {{ persona.cognome }}
+  </p>
+</div>

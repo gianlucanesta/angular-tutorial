@@ -9,10 +9,18 @@ export class AppComponent {
   title = 'angular-tutorial';
 
   persone = [
-    { nome: 'luca', cognome: 'rossi', isOnline: true },
-    { nome: 'marco', cognome: 'verdi', isOnline: true },
-    { nome: 'anna', cognome: 'neri', isOnline: false },
+    { nome: 'luca', cognome: 'rossi', isOnline: true, color: 'blue' },
+    { nome: 'marco', cognome: 'verdi', isOnline: true, color: 'red' },
+    { nome: 'anna', cognome: 'neri', isOnline: false, color: 'orange' },
   ];
+
+  btnClick() {
+    this.persone = [
+      { nome: 'gianluca', cognome: 'rossi', isOnline: true, color: 'blue' },
+      { nome: 'gianmarco', cognome: 'verdi', isOnline: true, color: 'red' },
+      { nome: 'gianpiero', cognome: 'neri', isOnline: false, color: 'orange' },
+    ];
+  }
 
   isVisible = true;
   // numero = 3;
