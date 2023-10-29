@@ -15,6 +15,8 @@ export class AppComponent {
   ];
 
   isVisible = true;
+  // numero = 3;
+  stringa = 'topolino';
 
   onInput(event: Event) {
     this.title = (<HTMLInputElement>event.target).value;

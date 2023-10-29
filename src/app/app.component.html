@@ -45,3 +45,13 @@
     }}
   </p>
 </div>
+
+<h3><strong>direttiva Switch</strong></h3>
+
+<div [ngSwitch]="stringa">
+  <p *ngSwitchCase="'pippo'">uno</p>
+  <p *ngSwitchCase="'paperino'">due</p>
+  <p *ngSwitchCase="'pluto'">tre</p>
+  <p *ngSwitchCase="'topolino'">quattro</p>
+  <p *ngSwitchDefault>default</p>
+</div>
