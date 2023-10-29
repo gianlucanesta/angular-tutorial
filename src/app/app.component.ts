@@ -12,7 +12,7 @@ import {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements AfterViewInit {
-  colore = 'yellow';
+  colore = '';
 
   title = 'angular-tutorial';
 
