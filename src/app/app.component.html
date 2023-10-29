@@ -1,15 +1,13 @@
 <!-- <app-prova></app-prova> -->
 
-<!-- <button mat-raised-button color="primary" (click)="onClick(this)">
+<button mat-raised-button color="primary" (click)="onClick($event)">
   Primary
-</button> -->
+</button>
 
 <mat-form-field class="example-full-width">
   <mat-label>Favorite food</mat-label>
-  <input
-    matInput
-    placeholder="Ex. Pizza"
-    value="Sushi"
-    (input)="onInput($event)"
-  />
+  <input matInput placeholder="Ex. Pizza" [(ngModel)]="title" />
 </mat-form-field>
+<div>
+  {{ title }}
+</div>
