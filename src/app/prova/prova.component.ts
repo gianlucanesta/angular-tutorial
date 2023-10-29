@@ -5,9 +5,11 @@ import {
   AfterViewInit,
   Component,
   DoCheck,
+  EventEmitter,
   Input,
   OnDestroy,
   OnInit,
+  Output,
   SimpleChange,
 } from '@angular/core';
 
@@ -45,9 +47,18 @@ export class ProvaComponent
 
   @Input() data: any;
 
+  @Output() mandaDatiEvento = new EventEmitter<string>();
+
+  nome = 'Luca';
+
   constructor() {
     console.log('costruttore');
   }
+
+  mandaDati() {
+    this.mandaDatiEvento.emit(this.nome);
+  }
+
   ngOnInit(): void {
     // console.log('ngOnInit');
     setInterval(() => {

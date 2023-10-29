@@ -36,6 +36,10 @@ export class AppComponent {
     this.title = 'ho cliccato sul bottone';
   }
 
+  onRiceviDati(value: string) {
+    alert(value);
+  }
+
   getColor() {
     return 'green';
   }

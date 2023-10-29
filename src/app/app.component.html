@@ -95,3 +95,6 @@
 <h3><strong>Dati da componente padre a figlio</strong></h3>
 <app-prova [data]="persone"></app-prova>
 <button (click)="btnClick()">Cambia</button>
+
+<h3><strong>Dati da componente figlio a padre</strong></h3>
+<app-prova (mandaDatiEvento)="onRiceviDati($event)"></app-prova>
