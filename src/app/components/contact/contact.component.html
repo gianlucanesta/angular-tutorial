@@ -1,14 +1,3 @@
-<div *ngIf="!isProfile; else profiloContatto">
-  <p style="text-transform: uppercase; margin-top: 50px">Lista Contatti</p>
+<p>Profilo di {{ persona.nome }} {{ persona.cognome }}</p>
 
-  <div *ngFor="let persona of persone; index as i">
-    <a routerLink="/contact/{{ i }}">
-      <p>{{ persona.nome }} - {{ persona.cognome }}</p>
-    </a>
-  </div>
-</div>
-<ng-template #profiloContatto>
-  <p style="text-transform: uppercase; margin-top: 50px">
-    Profilo di: {{ persona.nome }} {{ persona.cognome }}
-  </p>
-</ng-template>
+<p>colore preferito: {{ persona.color }}</p>
