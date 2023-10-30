@@ -1,17 +1,12 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ServizioProvaService } from './servizi/servizio-prova.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit {
   colore = '';
 
   numero = 5.98797;
@@ -20,26 +15,14 @@ export class AppComponent implements AfterViewInit {
 
   oggi = Date.now();
 
-  persone = [
-    { nome: 'luca', cognome: 'rossi', isOnline: true, color: 'blue' },
-    { nome: 'marco', cognome: 'verdi', isOnline: true, color: 'red' },
-    { nome: 'anna', cognome: 'neri', isOnline: false, color: 'orange' },
-  ];
+  // persone = [
+  //   { nome: 'luca', cognome: 'rossi', isOnline: true, color: 'blue' },
+  //   { nome: 'marco', cognome: 'verdi', isOnline: true, color: 'red' },
+  //   { nome: 'anna', cognome: 'neri', isOnline: false, color: 'orange' },
+  // ];
+  constructor(private servizioProva: ServizioProvaService) {}
 
-  valore = 'ciao';
-
-  @ViewChild('inputSaluti') inputSaluti!: ElementRef<HTMLInputElement>;
-
-  ngAfterViewInit(): void {
-    console.log('ngAfterViewInit');
-    console.log(this.inputSaluti);
-  }
-
-  onClick() {
-    console.log(this.inputSaluti.nativeElement.value);
-  }
-
-  cambiaColoreEvidenziatore(colore: string) {
-    this.colore = colore;
+  ngOnInit(): void {
+    console.log('appComponent', this.servizioProva.persone);
   }
 }
