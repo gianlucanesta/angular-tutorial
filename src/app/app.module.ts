@@ -10,9 +10,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { HighlightDirective } from './direttive/highlight/highlight.directive';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, ProvaComponent, HighlightDirective],
+  declarations: [AppComponent, ProvaComponent, HighlightDirective, AboutComponent, ContactComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
