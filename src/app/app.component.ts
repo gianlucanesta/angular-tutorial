@@ -14,7 +14,11 @@ import {
 export class AppComponent implements AfterViewInit {
   colore = '';
 
+  numero = 5.98797;
+
   title = 'angular-tutorial';
+
+  oggi = Date.now();
 
   persone = [
     { nome: 'luca', cognome: 'rossi', isOnline: true, color: 'blue' },
