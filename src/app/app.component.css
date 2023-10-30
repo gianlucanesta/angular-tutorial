@@ -43,3 +43,9 @@ li > p {
   background-color: red;
   color: black;
 }
+
+a {
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 16px;
+}
