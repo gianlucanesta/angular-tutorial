@@ -5,6 +5,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { AuthGuard } from './services/auth/auth.guard';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/homepage' },
@@ -12,6 +13,8 @@ const routes: Routes = [
   {
     path: 'contacts',
     component: ContactsComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
     children: [{ path: ':id', component: ContactComponent }],
   },
   { path: 'about', component: AboutComponent },
