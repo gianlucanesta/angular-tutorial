@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServizioProvaService } from './services/servizio-prova.service';
+import { Observable, interval } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,22 +8,21 @@ import { ServizioProvaService } from './services/servizio-prova.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  colore = '';
-
-  numero = 5.98797;
-
-  title = 'angular-tutorial';
-
-  oggi = Date.now();
-
-  // persone = [
-  //   { nome: 'luca', cognome: 'rossi', isOnline: true, color: 'blue' },
-  //   { nome: 'marco', cognome: 'verdi', isOnline: true, color: 'red' },
-  //   { nome: 'anna', cognome: 'neri', isOnline: false, color: 'orange' },
-  // ];
   constructor(private servizioProva: ServizioProvaService) {}
 
   ngOnInit(): void {
-    console.log('appComponent', this.servizioProva.persone);
+    // interval(1000).subscribe((numero) => {
+    // console.log(numero);
+    // });
+    // console.log(interval(1000));
+    // new Observable((observer) => {
+    //   let count = 0;
+    //   setInterval(() => {
+    //     observer.next(count);
+    //     count++;
+    //   }, 1000);
+    // }).subscribe((numero) => {
+    //   console.log(numero);
+    // });
   }
 }
