@@ -4,15 +4,19 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/homepage' },
+  { path: 'homepage', component: HomeComponent },
   {
     path: 'contacts',
     component: ContactsComponent,
     children: [{ path: ':id', component: ContactComponent }],
   },
   { path: 'about', component: AboutComponent },
+  { path: '404', component: NotfoundComponent },
+  { path: '**', redirectTo: '404' },
 ];
 
 @NgModule({

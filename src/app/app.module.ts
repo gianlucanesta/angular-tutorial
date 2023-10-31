@@ -14,9 +14,19 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 @NgModule({
-  declarations: [AppComponent, ProvaComponent, HighlightDirective, AboutComponent, ContactComponent, HomeComponent, ContactsComponent],
+  declarations: [
+    AppComponent,
+    ProvaComponent,
+    HighlightDirective,
+    AboutComponent,
+    ContactComponent,
+    HomeComponent,
+    ContactsComponent,
+    NotfoundComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
