@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { interval } from 'rxjs';
 
 @Component({
@@ -12,10 +13,13 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.sottoscrizione = interval(1000).subscribe((numero) => {
-      console.log(numero);
+      // console.log(numero);
     });
   }
   ngOnDestroy(): void {
     this.sottoscrizione.unsubscribe();
+  }
+  onSubmit(form: NgForm): void {
+    console.log(form);
   }
 }
