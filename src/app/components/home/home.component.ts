@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { interval } from 'rxjs';
 
@@ -8,6 +8,8 @@ import { interval } from 'rxjs';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  @ViewChild('homeform') homeform!: NgForm;
+
   sottoscrizione: any;
   constructor() {}
 
@@ -20,6 +22,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.sottoscrizione.unsubscribe();
   }
   onSubmit(form: NgForm): void {
-    console.log(form);
+    console.log(this.homeform);
   }
 }
