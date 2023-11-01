@@ -12,6 +12,14 @@ export class HomeComponent implements OnInit, OnDestroy {
   homeform!: FormGroup;
 
   sottoscrizione: any;
+
+  url =
+    'https://angular-course-9b140-default-rtdb.europe-west1.firebasedatabase.app/persone';
+
+  completeUrl(url: string) {
+    return this.url + '.json';
+  }
+
   constructor(private firebase: FirebaseService) {}
 
   ngOnInit(): void {
@@ -31,14 +39,21 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.sottoscrizione.unsubscribe();
   }
   onSubmit(): void {
-    console.log(this.homeform.value.nome, this.homeform.value.email);
+    // console.log(this.homeform.value.nome, this.homeform.value.email);
 
     //Firebase
     this.firebase
-      .insertPersona(
-        'https://angular-course-9b140-default-rtdb.europe-west1.firebasedatabase.app/persone.json',
-        { nome: this.homeform.value.nome, email: this.homeform.value.email }
-      )
+      .insertPersona(this.completeUrl(this.url), {
+        nome: this.homeform.value.nome,
+        email: this.homeform.value.email,
+      })
+      .subscribe((data) => {
+        console.log(Object.values(data));
+      });
+  }
+  onDeletePersona() {
+    this.firebase
+      .deletePersona(this.url, '-NiAscrzFxJJ58N7-3yw')
       .subscribe((data) => {
         console.log(data);
       });

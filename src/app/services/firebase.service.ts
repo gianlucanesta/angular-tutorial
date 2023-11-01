@@ -14,4 +14,8 @@ export class FirebaseService {
   getPersone(url: string) {
     return this.http.get(url);
   }
+
+  deletePersona(url: string, id: string) {
+    return this.http.delete(`${url}/${id}.json`);
+  }
 }

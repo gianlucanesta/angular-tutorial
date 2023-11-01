@@ -20,8 +20,10 @@ export class ContactsComponent implements OnInit {
       )
       .subscribe((data: any) => {
         this.persone = Object.keys(data).map((key) => {
+          data[key]['id'] = key;
           return data[key];
         });
+        console.log(Object.keys(data));
         console.log(this.persone);
       });
   }
