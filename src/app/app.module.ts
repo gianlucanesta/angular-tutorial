@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HighlightDirective } from './direttive/highlight/highlight.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
@@ -41,6 +42,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
