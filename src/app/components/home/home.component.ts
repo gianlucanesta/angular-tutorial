@@ -58,4 +58,13 @@ export class HomeComponent implements OnInit, OnDestroy {
         console.log(data);
       });
   }
+  onPatchPersona() {
+    this.firebase
+      .patchPersona(this.url, '-NiB1eU_I3bRkttfsKFd', {
+        email: 'prova@prova.com',
+      })
+      .subscribe((data) => {
+        console.log(data);
+      });
+  }
 }

@@ -18,4 +18,8 @@ export class FirebaseService {
   deletePersona(url: string, id: string) {
     return this.http.delete(`${url}/${id}.json`);
   }
+
+  patchPersona(url: string, id: string, body: {}) {
+    return this.http.patch(`${url}/${id}.json`, body);
+  }
 }
