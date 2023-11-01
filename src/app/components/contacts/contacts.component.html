@@ -3,7 +3,7 @@
 
   <div *ngFor="let persona of persone; index as i">
     <a routerLink="/contacts/{{ i }}">
-      <p>{{ persona.nome }} - {{ persona.cognome }}</p>
+      <p>{{ persona.nome }} - {{ persona.email }}</p>
     </a>
   </div>
 </div>
