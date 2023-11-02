@@ -7,11 +7,13 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { AuthGuard } from './services/auth/auth.guard';
 import { SignupComponent } from './components/signup/signup.component';
+import { SigninComponent } from './components/signin/signin.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/homepage' },
   { path: 'homepage', component: HomeComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'signin', component: SigninComponent },
   {
     path: 'contacts',
     component: ContactsComponent,

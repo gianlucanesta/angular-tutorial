@@ -20,6 +20,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { SigninComponent } from './components/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { SignupComponent } from './components/signup/signup.component';
     ContactsComponent,
     NotfoundComponent,
     SignupComponent,
+    SigninComponent,
   ],
   imports: [
     BrowserModule,
