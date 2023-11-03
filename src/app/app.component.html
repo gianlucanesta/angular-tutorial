@@ -1,8 +1,30 @@
-<!-- <app-about></app-about>
-
-<app-contact></app-contact>
-
-<app-home></app-home> -->
+<p>
+  <mat-toolbar color="primary">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Angular 16</span>
+    <span class="example-spacer"></span>
+    <!-- <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button> -->
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
 
 <a routerLink="/">Home</a>
 <a routerLink="about">About</a>
@@ -10,6 +32,13 @@
 <a routerLink="signin">Accedi</a>
 <a routerLink="signup">Registrati</a>
 
-<button (click)="onLogout()">Logout</button>
+<button
+  mat-raised-button
+  color="primary"
+  *ngIf="isLoggedIn()"
+  (click)="onLogout()"
+>
+  Logout
+</button>
 
 <router-outlet></router-outlet>

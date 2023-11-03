@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class AuthService {
-  isLoggedIn = true;
+  isLoggedIn = false;
   isAdmin = true;
   APIKey = 'AIzaSyBQ79Es6mqwRCXxHpsmm0Wi8zI5aYeZOfI';
   signUpURL = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${this.APIKey}`;

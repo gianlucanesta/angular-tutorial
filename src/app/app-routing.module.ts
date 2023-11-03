@@ -11,7 +11,7 @@ import { SigninComponent } from './components/signin/signin.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/homepage' },
-  { path: 'homepage', component: HomeComponent },
+  { path: 'homepage', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
   {
@@ -21,7 +21,7 @@ const routes: Routes = [
     canActivateChild: [AuthGuard],
     children: [{ path: ':id', component: ContactComponent }],
   },
-  { path: 'about', component: AboutComponent },
+  { path: 'about', component: AboutComponent, canActivate: [AuthGuard] },
   { path: '404', component: NotfoundComponent },
   { path: '**', redirectTo: '404' },
 ];
